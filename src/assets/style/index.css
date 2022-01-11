@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Text";
+  src: url("../../assets/fonts/PlusJakartaText-Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../../assets/fonts/PlusJakartaSans-Medium.woff") format("woff"); /* Pretty Modern Browsers */
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+p,
+div,
+a,
+h1,
+h2,
+h3,
+span {
+  color: #1e2749;
+}
+
+.toast-message {
+  color: #fff !important;
+}
+
+.main-bg {
+  background-image: url("../icons/money_bg.svg");
+  background-size: 422px;
+  background-repeat: no-repeat;
+  background-position: 130px 150px;
+}
+
+body {
+  @apply bg-lightgrey;
+  margin: 0;
+  font-family: "Plus Jakarta Text", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  aside { 
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+}
+
+h1 {
+  @apply text-dark text-xl font-bold;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+    line-height: 47px;
+  }
+}
+
+.bg-payment {
+  max-width: 237px;
+  width: 100%;
+}
+
+button:disabled {
+  background-color: #eee;
+  user-select: none;
+}
+
+.info-icon {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 10px;
+  color: #fff;
+  padding: 0px 5px;
+  border-radius: 50%;
+  background-color: #b9b2b2;
+  cursor: pointer;
+}
+
+#agree {
+  width: 20px;
+  height: 20px;
+}
+
+#agree:checked {
+  background-color: #27b799;
+  background-image: url("../icons/checked.svg");
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.close-icon-modal {
+  top: 20px;
+  right: 20px;
+}
